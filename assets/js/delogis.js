@@ -1044,7 +1044,8 @@
 
     $(window).on("scroll", function() {
         if ($(".stricked-menu").length) {
-            var headerScrollPos = 130;
+            // var headerScrollPos = 130;
+            var headerScrollPos = 150;
             var stricky = $(".stricked-menu");
             if ($(window).scrollTop() > headerScrollPos) {
                 stricky.addClass("stricky-fixed");
@@ -1053,7 +1054,7 @@
             }
         }
         if ($(".scroll-to-top").length) {
-            var strickyScrollPos = 100;
+            var strickyScrollPos = 150;
             if ($(window).scrollTop() > strickyScrollPos) {
                 $(".scroll-to-top").fadeIn(500);
             } else if ($(this).scrollTop() <= strickyScrollPos) {

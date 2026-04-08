@@ -713,7 +713,7 @@ ul {
 .main-menu__bottom-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     background-color: var(--delogis-white);
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);
@@ -2950,6 +2950,8 @@ ul {
     position: relative;
     display: block;
     z-index: 1;
+    max-width: 400px; /* Reduced size */
+    margin: 0 auto;
 }
 
 .about-one__img img {
@@ -3015,12 +3017,16 @@ ul {
 
 .about-one__experience-box {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     max-width: 158px;
     width: 100%;
     background-color: var(--delogis-primary);
     border-radius: var(--delogis-bdr-radius);
-    padding: 5px 30px 38px;
+    padding: 35px 20px 30px; /* Adjusted padding for better fit */
     margin-top: 5px;
     z-index: 1;
 }
@@ -3034,7 +3040,7 @@ ul {
     bottom: 8px;
     background-color: var(--delogis-white);
     border-radius: var(--delogis-bdr-radius);
-    border: 1px solid var(--delogis-bdr-color);
+    /* border: 1px solid var(--delogis-bdr-color); */
     z-index: -1;
 }
 
@@ -3347,7 +3353,7 @@ padding: 10px 0 40px 0;
 }
 
 .feature-one__hover-title {
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 27px;
     color: #fff;
@@ -4774,7 +4780,7 @@ padding: 10px 0 40px 0;
 .why-choose-one__list {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     margin-right: -12px;
     margin-left: -12px;
@@ -4793,10 +4799,15 @@ padding: 10px 0 40px 0;
 
 .why-choose-one__single {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: #f1ece9;
     border-radius: var(--delogis-bdr-radius);
     padding: 40px 40px 37px;
+    height: 100%;
 }
 
 .why-choose-one__list li .icon {
@@ -5685,7 +5696,7 @@ padding: 10px 0 40px 0;
 }
 
 .footer-widget__about-text {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 32px;
     font-family: var(--delogis-font-two);
@@ -15960,6 +15971,8 @@ body.boxed-wrapper {
     .section-title__title {
         font-size: 30px;
         line-height: 45px;
+        margin-top: 35px;
+
     }
     .section-title__title br {
         display: none;
