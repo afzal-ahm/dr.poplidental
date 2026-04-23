@@ -874,7 +874,7 @@ ul {
     display: none;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
     .main-menu .main-menu__list,
     .main-menu .main-menu__list>li>ul,
     .main-menu .main-menu__list>li>ul>li>ul,
@@ -1170,11 +1170,11 @@ ul {
     color: var(--delogis-black);
 }
 
-/* @media (min-width: 1000px) {
+@media (min-width: 1024px) {
     .main-menu .mobile-nav__toggler {
         display: none;
     }
-} */
+}
 
 /*--------------------------------------------------------------
 # Mobile Nav
@@ -16967,7 +16967,7 @@ body.boxed-wrapper {
         width: 100%;
         justify-content: flex-end;
     }
-    /* .main-menu .mobile-nav__toggler {
+    .main-menu .mobile-nav__toggler {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -16976,7 +16976,7 @@ body.boxed-wrapper {
         line-height: 1;
         position: relative;
         z-index: 6;
-    } */
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -23951,12 +23951,12 @@ body.megamenu-popup-active .mobile-nav__content {
     }
 
     .main-header .main-menu .mobile-nav__toggler,
-    /* .stricky-header .mobile-nav__toggler {
+    .stricky-header .mobile-nav__toggler {
         display: none !important;
-    } */
+    }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1199px) {
     .main-header .main-menu__wrapper,
     .stricky-header .main-menu__wrapper {
         margin: 12px !important;
@@ -24044,7 +24044,7 @@ body.megamenu-popup-active .mobile-nav__content {
 /* =============================================================
    NAVBAR FLEXBOX OVERRIDE — supports index.html inline styles
 ============================================================= */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
     .main-menu__bottom-inner {
         height: auto !important;
         min-height: 78px;

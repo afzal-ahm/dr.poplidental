@@ -86,6 +86,194 @@
             border: 0;
             display: block;
         }
+
+        .main-menu__logo .navbar-logo {
+            width: auto;
+            height: clamp(52px, 6vw, 76px);
+            max-width: min(100%, 240px);
+            object-fit: contain;
+            display: block;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            .main-menu__logo {
+                padding: 12px 16px;
+            }
+
+            .main-menu__logo .navbar-logo {
+                height: clamp(54px, 9vw, 72px);
+                max-width: 220px;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .main-menu__logo {
+                padding: 10px 14px;
+            }
+
+            .main-menu__logo .navbar-logo {
+                height: clamp(48px, 12vw, 64px);
+                max-width: 190px;
+            }
+        }
+
+        @media only screen and (max-width: 1199px) {
+            .main-menu__wrapper {
+                margin: 12px;
+            }
+
+            .main-menu__wrapper-inner-content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .main-menu__logo {
+                position: relative;
+                padding: 12px 18px;
+                border-radius: var(--delogis-bdr-radius);
+            }
+
+            .main-menu__btn-box,
+            .main-menu__right {
+                display: none;
+            }
+
+            .main-menu__bottom-inner {
+                justify-content: flex-end;
+                min-height: 64px;
+                height: auto;
+                padding: 0 18px 0 0;
+            }
+
+            .main-menu__main-menu-box {
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .main-menu .main-menu__list,
+            .stricky-header .main-menu__list {
+                display: none;
+            }
+
+            .main-menu .mobile-nav__toggler {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                padding: 18px 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            .main-menu__logo .navbar-logo {
+                height: clamp(56px, 7vw, 74px);
+                max-width: 210px;
+            }
+        }
+
+@media only screen and (min-width: 1024px) and (max-width: 1099px) {
+    .main-menu__wrapper-inner-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .main-menu__logo {
+        position: relative !important;
+        padding: 12px 18px !important;
+        border-radius: var(--delogis-bdr-radius) !important;
+    }
+
+    .main-menu__btn-box,
+    .main-menu__right {
+        display: none !important;
+    }
+
+    .main-menu__bottom-inner {
+        justify-content: flex-end !important;
+        min-height: 64px !important;
+        height: auto !important;
+        padding: 0 18px 0 0 !important;
+    }
+
+    .main-menu__main-menu-box {
+        width: 100% !important;
+        justify-content: flex-end !important;
+    }
+
+    .main-menu .main-menu__list,
+    .stricky-header .main-menu__list {
+        display: none !important;
+    }
+
+    .main-menu .mobile-nav__toggler {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        padding: 18px 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1199px) {
+    .main-menu__wrapper {
+        margin: 12px;
+    }
+
+    .main-menu__wrapper-inner-content {
+        padding-left: 122px;
+        padding-right: 208px;
+    }
+
+    .main-menu__logo {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0 14px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--delogis-bdr-radius);
+    }
+
+    .main-menu__btn-box {
+        display: flex;
+        padding: 0 20px;
+    }
+
+    .main-menu__btn-box a {
+        font-size: 12px;
+    }
+
+    .main-menu__bottom-inner {
+        justify-content: center;
+        padding: 0 16px;
+    }
+
+    .main-menu__main-menu-box {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        justify-content: center;
+    }
+
+    .main-menu .main-menu__list,
+    .stricky-header .main-menu__list {
+        display: flex;
+    }
+
+    .main-menu .main-menu__list > li + li,
+    .stricky-header .main-menu__list > li + li {
+        margin-left: 16px;
+    }
+
+    .main-menu .main-menu__list > li > a,
+    .stricky-header .main-menu__list > li > a {
+        font-size: 12px;
+    }
+
+    .main-menu .mobile-nav__toggler {
+        display: none;
+    }
+}
     </style>
 </head>
 <body class="custom-cursor boxed-wrapper">
@@ -96,7 +284,7 @@
     </div>
     <!-- /.preloader -->
     <div class="page-wrapper">
-        <header class="main-header">
+        <header class="main-header" id="navbar-placeholder">
             <div class="main-menu__top">
                 <div class="main-menu__top-inner">
                     <div class="main-menu__top-left">
@@ -125,7 +313,8 @@
                                     <i class="fas fa-map-marker"></i>
                                 </div>
                                 <div class="text">
-                                    <p>Office no. 11-12 ground floor, B-Block, DDA Market, CSC-1 , Yojana Vihar, Delhi-110092</p>
+                                    <p>Office No. 11-12, Ground Floor, B-Block, DDA Market, CSC-1 , Yojana Vihar,
+                                        Delhi-110092</p>
                                 </div>
                             </li>
                         </ul>
@@ -138,9 +327,10 @@
                 <div class="main-menu__wrapper">
                     <div class="main-menu__wrapper-inner">
                         <div class="main-menu__logo">
-                            <a href="index.html"><img src="assets/images/resources/logo.jpg" alt=""></a>
+                            <a href="index.html"><img src="assets/images/resources/logo-new.jpg"
+                                    alt="Dr Popli’s Dental Clinic" class="navbar-logo"></a>
                         </div>
-                        
+
                         <div class="main-menu__wrapper-inner-content">
                             <div class="main-menu__bottom">
                                 <div class="main-menu__bottom-inner">
@@ -154,7 +344,13 @@
                                                 <a href="about-us.html">About Us</a>
                                             </li>
                                             <li>
+                                                <a href="our-team.html">Our Team</a>
+                                            </li>
+                                            <li>
                                                 <a href="treatment.html">Treatment</a>
+                                            </li>
+                                            <li>
+                                                <a href="Medical-Visa-Assistance.html">Medical Visa Assistance</a>
                                             </li>
                                             <li>
                                                 <a href="videos.html">Videos</a>
@@ -195,6 +391,8 @@
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div>
         </div>
+
+
         <section id="full_mouth_implant_rehabilitation_with_implant" class="about-one">
             <div class="container">
                 <div class="row">
@@ -310,14 +508,14 @@
 
 </footer>
     </div>
-    <div class="mobile-nav__wrapper">
+    <div class="mobile-nav__wrapper" id="mobDrawer">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
         <!-- /.mobile-nav__overlay -->
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo.jpg" width="135"
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-new.jpg" width="135"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->
@@ -338,7 +536,9 @@
             </ul>
 
         </div>
+
     </div>
+
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fas fa-arrow-up"></i></a>
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
