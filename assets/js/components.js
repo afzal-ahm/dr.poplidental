@@ -117,6 +117,7 @@ const FOOTER = `
                                     <li><a href="our-team.html">Our Team</a></li>
                                     <li><a href="treatment.html">Treatment</a></li>
                                     <li><a href="Medical-Visa-Assistance.html">Medical Visa Assistance</a></li>
+                                    <li class="current"><a href="/panel-patients.html">Panel Patients & Beneficiaries</a></li>
                                     <li><a href="videos.html">Videos</a></li>
                                     <li><a href="images.html">Images</a></li>
                                     <li><a href="contact.html">Contact</a></li>
